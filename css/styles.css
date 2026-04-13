@@ -1,0 +1,266 @@
+:root {
+    --primary: #000000;
+    --primary-foreground: #ffffff;
+    --secondary: #f4f4f5;
+    --muted: #71717a;
+    --foreground: #09090b;
+	--accent: #e11d48;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+	margin: 0;
+	font-family:'Inter', system-ui, -apple-system, sans-serif;
+	color: var(--foreground);
+	line-height: 1.5;
+	display: flex;
+	flex-direction:column;
+	min-height:100vh;
+}
+
+main{
+	flex:1;
+}
+
+header{
+	border-bottom:1 px solid var(--secondary);
+	padding: 1rem 0;
+	position:sticky;
+	top:0;
+	background:white;
+	z-index:1000;
+}
+
+.flex-between{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.navbar ul{
+	list-style:none;
+	display:flex;
+	gap:2rem;
+	margin:0;
+	padding:0;
+}
+
+.navbar a{
+	text-decoration:none;
+	color:var(--foreground);
+	font-size:0.875rem;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing:0.05em;
+	transition:color 0.2s;
+}
+
+.navbar a:hover{
+	color:var(--muted);
+}
+	
+.container{
+	width: 90%
+	max-width:1200px;
+	margin:0 auto;
+}
+
+
+.home-banner{
+	positive: relative;
+	height: 85vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.banner-img{
+	position: absolute;
+	inset:0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index:-2;
+}
+
+.banner-overlay{
+	position: absolute;
+	inset:0;
+	background: rgba(0,0,0,0.3);
+	z-index:-1;
+}
+
+.banner-content{
+	color:white;
+}
+
+.tagline{
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-size= 0.875rem;
+	color:rgba(255,255,255,0.8);
+}
+
+.banner-title{
+	font-size:3.5rem;
+	font-weight:700;
+	margin:1rem 0;
+	line-height:1.1;
+}
+
+.text-center{text-align:center;}
+.max-w-lg { max-width: 32rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-auto{margin-left: auto;}
+.py-20 { padding: 5rem 0; }
+.mb-8 { margin-bottom: 2rem; }
+.brand-intro { padding: 5rem 0; }
+.cta-banner { background: var(--secondary); padding: 5rem 0; }
+.section-title { font-size: 1.875rem; font-weight: 600; }
+.section-title-sm { font-size: 1.5rem; font-weight: 600; }
+.text-muted { color: var(--muted); }
+
+.description{
+	color:rgba(255,255,255,0.8);
+	font-size:1.125rem;
+	margin-bottom:2rem;
+}
+
+.view-all {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.view-all:hover {
+    color: var(--primary);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+    border: none;
+}
+
+.btn:hover{opacity:0.9;cursor: pointer;}
+
+.product-grid{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:1.5rem;
+}
+
+@media(min-width:768px){
+	.product-grid{grid-template-columns:repeat(4,1fr);}
+}
+
+.product-card img{
+	text-decoration:none;
+	color:inherit;
+}
+
+.product-image-wrapper {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-info h3 {
+    font-size: 0.875rem;
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.footer {
+    background: #140F0C;
+    padding: 4rem 0 2rem 0;
+    border-top: 1px solid var(--secondary);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+}
+
+.footer h2 {
+    font-size: 1 rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+	color:white;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+	color:white;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li { margin-bottom: 0.5rem; }
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+.back-to-top {
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.animate-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+	
+	
