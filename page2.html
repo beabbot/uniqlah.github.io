@@ -16,33 +16,26 @@
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="page2.html">Shop</a></li>
-			<li><a href="page3.html">About</a></li>
-			<li><a href="page4.html">Order</a></li>
+			<li><a href="page3.html">Cart</a></li>
+			<li><a href="page4.html">Profile</a></li>
 		</ul>
+		
 	</nav>
 </header>
 
 <main class="container py-20">
-	<header class="shop-header">
-		<h1 class="section-title">Shop</h1>
-		<p class="text">Browse our curated collection of trendy, affordable clothing.</p>
-	</header>
+	<h1 class="section-title">Shop</h1>
+	<p class="text-muted">Browse our curated collection of trendy, affordable clothing.</p>
 	
-	<div class="flex-between">
-		<aside class="shop-sidebar">
-			<section>
-				<strong>Categories</strong>
-				<ul>
-					<li><a href="#">ALL</a></li>
-					<li><a href="#">MEN</a></li>
-					<li><a href="#">WOMEN</a></li>
-					<li><a href="#">ACCESSORIES</a></li>
-				</ul>
-			</section>
-		</aside>
+	<nav class="category-filters mb-8">
+		<button class="filter-btn active" data-filter="all">ALL</button>
+		<button class="filter-btn" data-filter="men">MEN</button>
+		<button class="filter-btn" data-filter="women">WOMEN</button>
+		<button class="filter-btn" data-filter="accessories">ACCESSORIES</button>
+    </nav>
 		
-		<div class="product-grid">
-				<div class="product-card">
+		<section class="product-grid">
+				<div class="product-card" data-category="men">
 					<div class="product-image-wrapper">
 						<img src="./assets/product-shirt.jpg" alt="Classic White Tee">
 					</div>
@@ -50,10 +43,25 @@
 						<h3>MEN</h3>
 						<h3>Classic White Tee</h3>
 						<p>RM 29.90</p>
+						
+						<form class="product-form">
+							<div class="selection-row">
+								<select name="size" class="size-select" required>
+									<option value="">Size</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+								</select>
+								
+								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+							</div>
+							
+							<button type="submit" class="btn btn-add">Add to Cart</button>
+						</form>
 					</div>
 				</div>
 				
-				<div class="product-card">
+				<div class="product-card" data-category="women">
 					<div class="product-image-wrapper">
 						<img src="./assets/product-hoodie.jpg" alt="Hoodie">
 					</div>
@@ -61,10 +69,25 @@
 						<h3>WOMEN</h3>
 						<h3>Sage Oversized Hoodie</h3>
 						<p>RM 59.90</p>
+						
+						<form class="product-form">
+							<div class="selection-row">
+								<select name="size" class="size-select" required>
+									<option value="">Size</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+								</select>
+								
+								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+							</div>
+							
+							<button type="submit" class="btn btn-add">Add to Cart</button>
+						</form>
 					</div>
 				</div>
 				
-				<div class="product-card">
+				<div class="product-card" data-category="women">
 					<div class="product-image-wrapper">
 						<img src="./assets/product-dress.jpg" alt="Dress">
 					</div>
@@ -72,10 +95,25 @@
 						<h3>WOMEN</h3>
 						<h3>Linen Midi Dress</h3>
 						<p>RM 79.90</p>
+						
+						<form class="product-form">
+							<div class="selection-row">
+								<select name="size" class="size-select" required>
+									<option value="">Size</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+								</select>
+								
+								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+							</div>
+							
+							<button type="submit" class="btn btn-add">Add to Cart</button>
+						</form>
 					</div>
 				</div>
 				
-				<div class="product-card">
+				<div class="product-card" data-category="men">
 					<div class="product-image-wrapper">
 						<img src="./assets/product-jacket.jpg" alt="Jacket">
 					</div>
@@ -83,10 +121,25 @@
 						<h3>MEN</h3>
 						<h3>Classic Denim Jacket</h3>
 						<p>RM 89.90</p>
+						
+						<form class="product-form">
+							<div class="selection-row">
+								<select name="size" class="size-select" required>
+									<option value="">Size</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+								</select>
+								
+								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+							</div>
+							
+							<button type="submit" class="btn btn-add">Add to Cart</button>
+						</form>
 					</div>
 				</div>
 				
-				<div class="product-card">
+				<div class="product-card" data-category="accessories">
 					<div class="product-image-wrapper">
 						<img src="./assets/product-bag.jpg" alt="Bag">
 					</div>
@@ -94,10 +147,25 @@
 						<h3>ACCESSORIES</h3>
 						<h3>Canvas Tote Bag</h3>
 						<p>RM 34.90</p>
+						
+						<form class="product-form">
+							<div class="selection-row">
+								<select name="size" class="size-select" required>
+									<option value="">Size</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+								</select>
+								
+								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+							</div>
+							
+							<button type="submit" class="btn btn-add">Add to Cart</button>
+						</form>
 					</div>
 				</div>
 				
-				<div class="product-card">
+				<div class="product-card" data-category="accessories">
 					<div class="product-image-wrapper">
 						<img src="./assets/product-sneakers.jpg" alt="Sneakers">
 					</div>
@@ -105,10 +173,25 @@
 						<h3>ACCESSORIES</h3>
 						<h3>Classic White Sneakers</h3>
 						<p>RM 89.90</p>
+						
+						<form class="product-form">
+							<div class="selection-row">
+								<select name="size" class="size-select" required>
+									<option value="">Size</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+								</select>
+								
+								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+							</div>
+							
+							<button type="submit" class="btn btn-add">Add to Cart</button>
+						</form>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 	<footer class="footer">
 		<div class="container footer-grid">
@@ -123,8 +206,8 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="page2.html">Shop</a></li>
-					<li><a href="page3.html">About</a></li>
-					<li><a href="page4.html">Order</a></li>
+					<li><a href="page3.html">Cart</a></li>
+					<li><a href="page4.html">Profile</a></li>
 				</ul>
 			</nav>
 			
