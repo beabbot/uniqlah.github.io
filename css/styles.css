@@ -350,7 +350,7 @@ header.scrolled {
 .max-w-md    { max-width: 28rem; }
 .max-w-2xl   { max-width: 48rem; }
 .mx-auto     { margin-left: auto; margin-right: auto; }
-.cta-banner  { background: var(--ivory); }
+.cta-banner  { background: var(--ivory); padding: 5rem 0; }
 
 .view-all {
     font-family: var(--font-body);
