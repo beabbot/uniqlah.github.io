@@ -28,10 +28,10 @@
 	<p class="text-muted">Review your order and fill in your delivery details.</p>
 
 	<!-- Order Summary -->
-	<section class="checkout-form-section">
+	<section class="checkout-form-section" id="checkout-summary-section">
 		<h2 class="section-title-sm">Order Summary</h2>
 
-		<div id="checkout-empty" class="text-center py-20" style="display: none;">
+		<div id="checkout-empty" class="hidden-section">
 			<p class="text-muted">Your cart is empty.</p>
 			<br>
 			<a href="page2.html" class="btn">Browse Products</a>
@@ -39,8 +39,7 @@
 
 		<div id="checkout-summary">
 			<div id="checkout-items-container"></div>
-
-			<div class="flex-between" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--stone-light);">
+			<div class="checkout-total-row">
 				<p class="text-muted">Total</p>
 				<h2 class="section-title" id="checkout-total">RM 0.00</h2>
 			</div>
@@ -48,7 +47,7 @@
 	</section>
 
 	<!-- Delivery Details Form -->
-	<section class="checkout-form-section animate-up">
+	<section class="checkout-form-section animate-up" id="checkout-form-section">
 		<form id="checkoutForm" class="form-container">
 			<fieldset>
 				<legend>Delivery Details</legend>
@@ -80,7 +79,7 @@
 				</div>
 			</fieldset>
 
-			<fieldset style="margin-top: 1.5rem;">
+			<fieldset class="fieldset-mt">
 				<legend>Payment Method</legend>
 
 				<div class="form-group">
@@ -95,15 +94,15 @@
 				</div>
 			</fieldset>
 
-			<div class="flex-between" style="margin-top: 2rem;">
+			<div class="form-actions">
 				<a href="page3.html" class="btn btn-outline">← Back to Cart</a>
 				<button type="submit" class="btn">Place Order</button>
 			</div>
 		</form>
 	</section>
 
-	<!-- Order Confirmation Message (hidden by default) -->
-	<div id="order-confirmation" class="text-center py-20" style="display: none;">
+	<!-- Order Confirmation (hidden by default) -->
+	<div id="order-confirmation" class="hidden-section text-center py-20">
 		<h2 class="section-title">Order Placed! 🎉</h2>
 		<p class="text-muted">Thank you for shopping with Uniqlah. We'll contact you shortly with your delivery details.</p>
 		<br>
@@ -144,54 +143,5 @@
 </footer>
 
 <script src="./js/scripts.js"></script>
-<script>
-	// Load cart from localStorage and display order summary
-	const cart = JSON.parse(localStorage.getItem('uniqlah-cart')) || [];
-	const summaryDiv = document.getElementById('checkout-summary');
-	const emptyDiv = document.getElementById('checkout-empty');
-	const totalEl = document.getElementById('checkout-total');
-	const itemsContainer = document.getElementById('checkout-items-container');
-
-	if (cart.length === 0) {
-		summaryDiv.style.display = 'none';
-		emptyDiv.style.display = 'block';
-		document.getElementById('checkoutForm').style.display = 'none';
-	} else {
-		let total = 0;
-		let html = '<table style="width:100%; border-collapse: collapse;">';
-		html += '<thead><tr style="border-bottom: 1px solid var(--stone-light); text-align:left;">'
-			+ '<th style="padding: 0.5rem 0;">Item</th>'
-			+ '<th style="padding: 0.5rem 0;">Size</th>'
-			+ '<th style="padding: 0.5rem 0;">Qty</th>'
-			+ '<th style="padding: 0.5rem 0; text-align:right;">Price</th>'
-			+ '</tr></thead><tbody>';
-
-		cart.forEach(item => {
-			const subtotal = item.price * item.quantity;
-			total += subtotal;
-			html += `<tr style="border-bottom: 1px solid var(--stone-light);">
-				<td style="padding: 0.75rem 0;">${item.name}</td>
-				<td style="padding: 0.75rem 0;">${item.size}</td>
-				<td style="padding: 0.75rem 0;">${item.quantity}</td>
-				<td style="padding: 0.75rem 0; text-align:right;">RM ${subtotal.toFixed(2)}</td>
-			</tr>`;
-		});
-
-		html += '</tbody></table>';
-		itemsContainer.innerHTML = html;
-		totalEl.textContent = `RM ${total.toFixed(2)}`;
-	}
-
-	// Handle form submission
-	document.getElementById('checkoutForm').addEventListener('submit', function(e) {
-		e.preventDefault();
-		// Clear cart
-		localStorage.removeItem('uniqlah-cart');
-		// Hide form and show confirmation
-		document.querySelector('.checkout-form-section:last-of-type').style.display = 'none';
-		document.querySelector('.checkout-form-section:first-of-type').style.display = 'none';
-		document.getElementById('order-confirmation').style.display = 'block';
-	});
-</script>
 </body>
 </html>

@@ -822,3 +822,132 @@ legend {
     .product-grid { gap: 1rem; }
     fieldset { padding: 1.5rem; }
 }
+
+/* Hidden utility — replaces style="display:none" */
+.hidden-section {
+    display: none;
+}
+
+/* Form actions row — replaces style="margin-top:2rem" flex-between */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.form-actions-right {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Fieldset spacing — replaces style="margin-top:1.5rem" */
+.fieldset-mt {
+    margin-top: 1.5rem;
+}
+
+/* Checkout total row — replaces inline flex-between with border */
+.checkout-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--stone-light);
+}
+
+/* Cart & summary tables — replaces all inline table styles */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-thead-row th {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--stone-light);
+    text-align: left;
+}
+
+.cart-row {
+    border-bottom: 1px solid var(--stone-light);
+}
+
+.cart-cell {
+    padding: 0.75rem 0;
+}
+
+/* Qty +/- controls */
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qty-btn {
+    border: 1px solid var(--stone-light);
+    background: none;
+    padding: 0 0.4rem;
+    cursor: pointer;
+}
+
+/* Remove button in cart */
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Profile & checkout confirmation sections */
+.profile-confirmation,
+#profile-confirmation,
+#order-confirmation {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+/* Radio and checkbox groups */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Order/profile summary table (shown in new tab) */
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.summary-table th,
+.summary-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--stone-light);
+    text-align: left;
+}
+
+.summary-table thead tr {
+    border-bottom: 2px solid var(--charcoal);
+}
+
+.summary-table th {
+    width: 35%;
+    font-weight: 500;
+    color: var(--charcoal);
+}
