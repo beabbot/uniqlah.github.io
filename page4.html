@@ -3,9 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> UNIQLAH </title>
+	<title> Uniqlah </title>
 	<link rel="stylesheet" href="./css/styles.css">
-	<link rel="icon" type="image/png" href="./assets/uniqlah_icon.png">
 </head>
 
 <body>
@@ -24,84 +23,96 @@
 </header>
 
 <main class="container py-20">
-	<section>
-		<h1 class="section-title">User Profile</h1>
-	</section>
+	<h1 class="section-title">User Profile</h1>
+	<p class="text-muted">Manage your account details and delivery preferences.</p>
 
-	<section class="animate-up">
+	<section class="checkout-form-section animate-up">
 		<form id="registrationForm" class="form-container">
 			<fieldset>
 				<legend>Account Registration & Info</legend>
 
-				<div class="form-group>
+				<div class="form-group">
 					<label for="fullName">Full Name:</label>
 					<input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
 				</div>
 
-				<div class="form-group>
+				<div class="form-group">
 					<label for="userEmail">Email Address:</label>
 					<input type="email" id="userEmail" name="userEmail" placeholder="example@email.com" required>
 				</div>
-				
-				<div class="form-group>
+
+				<div class="form-group">
 					<label for="userContact">Phone Number:</label>
-					<input type="contact" id="userContact" name="userContact" placeholder="010-000000000" required>
+					<input type="tel" id="userContact" name="userContact" placeholder="010-000 0000" required>
 				</div>
-				
-				<div class="form-group>
+
+				<div class="form-group">
 					<label for="userAddress">Address:</label>
-					<input type="address" id="userAddress" name="userAddress"required>
+					<input type="text" id="userAddress" name="userAddress" placeholder="No. 1, Jalan Example, 50000 Kuala Lumpur" required>
 				</div>
 
-
-				<div class="form-group>
+				<div class="form-group">
 					<label for="userBio">Delivery Notes / Bio:</label>
 					<br>
 					<textarea id="userBio" name="userBio" rows="4" cols="50" placeholder="Tell us more about your style or delivery preferences..."></textarea>
 				</div>
-
-				<div class="flex-between">
-					<button type="submit">Save Changes</button>
-				</div>
-
 			</fieldset>
+
+			<div class="flex-between" style="margin-top: 2rem;">
+				<a href="index.html" class="btn btn-outline">← Back to Home</a>
+				<button type="submit" class="btn">Save Changes</button>
+			</div>
 		</form>
 	</section>
+
+	<!-- Save Confirmation Message (hidden by default) -->
+	<div id="profile-confirmation" class="text-center py-20" style="display: none;">
+		<h2 class="section-title">Profile Saved! ✓</h2>
+		<p class="text-muted">Your details have been updated successfully.</p>
+		<br>
+		<a href="index.html" class="btn">Back to Home</a>
+	</div>
 </main>
 
-	<footer class="footer">
-		<div class="container footer-grid">
-			<section>
-				<h2>UNIQLAH</h2>
-				<p>Unique + Stylish. Affordable fashion for students and young adults who dare to express themselves.
-				</p>
-			</section>
-			
-			<nav>
-				<h2>QUICK LINKS</h2>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="page2.html">Shop</a></li>
-					<li><a href="page3.html">Cart</a></li>
-					<li><a href="page4.html">Profile</a></li>
-				</ul>
-			</nav>
-			
-			<section>
-				<h2>CONTACT</h2>
-				<a href="mailto:hello@uniqlah.com">hello@uniqlah.com</a>
-				<p>+60 12-345 6789</p>
-				<p>Kuala Lumpur,Malaysia</p>
-			</section>
-		</div>
-		
-		<div class="container text-center">
-			<hr>
-			<p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
-			<p>&copy; 2026 Uniqlah Fashion</p>
-		</div>
-	</footer>
+<footer class="footer">
+	<div class="container footer-grid">
+		<section>
+			<h2>UNIQLAH</h2>
+			<p>Unique + Stylish. Affordable fashion for students and young adults who dare to express themselves.</p>
+		</section>
 
-	<script src="./js/scripts.js"></script>
+		<nav>
+			<h2>QUICK LINKS</h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="page2.html">Shop</a></li>
+				<li><a href="page3.html">Cart</a></li>
+				<li><a href="page4.html">Profile</a></li>
+			</ul>
+		</nav>
+
+		<section>
+			<h2>CONTACT</h2>
+			<a href="mailto:hello@uniqlah.com">hello@uniqlah.com</a>
+			<p>+60 12-345 6789</p>
+			<p>Kuala Lumpur, Malaysia</p>
+		</section>
+	</div>
+
+	<div class="container text-center">
+		<hr>
+		<p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
+		<p>&copy; 2026 Uniqlah Fashion</p>
+	</div>
+</footer>
+
+<script src="./js/scripts.js"></script>
+<script>
+	document.getElementById('registrationForm').addEventListener('submit', function(e) {
+		e.preventDefault();
+		document.querySelector('.checkout-form-section').style.display = 'none';
+		document.getElementById('profile-confirmation').style.display = 'block';
+	});
+</script>
 </body>
 </html>
