@@ -951,3 +951,7 @@ legend {
     font-weight: 500;
     color: var(--charcoal);
 }
+
+.hidden-section {
+    display: none;
+}
