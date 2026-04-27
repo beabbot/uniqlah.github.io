@@ -777,13 +777,13 @@ legend {
 .radio-group,
 .checkbox-group {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-top: 0.5rem;
 }
 
-.radio-label,
-.checkbox-label {
+.radio-group label,
+.checkbox-group label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
