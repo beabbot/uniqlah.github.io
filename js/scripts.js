@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentActive) {
                 currentActive.classList.remove('active');
             }
-
+ 
             // Mark clicked button as active
             event.target.classList.add('active');
 
