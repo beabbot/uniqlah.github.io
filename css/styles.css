@@ -755,6 +755,13 @@ legend {
     appearance: none;
 }
 
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+    width: auto;
+    appearance: auto;
+    -webkit-appearance: auto;
+}
+
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -950,4 +957,8 @@ legend {
     width: 35%;
     font-weight: 500;
     color: var(--charcoal);
+}
+
+.hidden-section {
+    display: none;
 }
