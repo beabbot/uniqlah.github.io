@@ -1,16 +1,10 @@
-/**
- * =============================================================
- *  Uniqlah — Main JavaScript File
- *  Handles: Shop filtering, Cart management, Checkout, Profile
- * =============================================================
- */
+//Uniqlah — Main JavaScript File
+//Handles: Shop filtering, Cart management, Checkout, Profile
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* =========================================================
-     *  SECTION 1 — SHOP PAGE: Category Filter Buttons (page2)
-     *  Filters product cards based on selected category
-     * ========================================================= */
+//SECTION 1 — SHOP PAGE: Category Filter Buttons (page2)
+//Filters product cards based on selected category
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
 
@@ -44,18 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-    /* =========================================================
-     *  SECTION 2 — STATE MANAGEMENT: Cart via Local Storage
-     *  Stores and retrieves the shopping cart array from
-     *  localStorage so data persists across pages/sessions
-     * ========================================================= */
+//SECTION 2 — STATE MANAGEMENT: Cart via Local Storage
+//Stores and retrieves the shopping cart array from localStorage so data persists across pages/sessions
     const CART_KEY = 'uniqlah_user_cart';
 
-    /**
-     * Retrieves the current cart array from localStorage.
-     * Returns an empty array if nothing is stored yet.
-     */
+//Retrieves the current cart array from localStorage.
+//Returns an empty array if nothing is stored yet.
     const getCart = () => {
         const stored = localStorage.getItem(CART_KEY);
         return stored ? JSON.parse(stored) : [];
@@ -69,12 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem(CART_KEY, JSON.stringify(cartArray));
     };
 
-
-    /* =========================================================
-     *  SECTION 3 — SHOP PAGE: Add to Cart Logic (page2)
-     *  Reads product info from the card DOM, validates input,
-     *  and pushes/updates item in the cart
-     * ========================================================= */
+//SECTION 3 — SHOP PAGE: Add to Cart Logic (page2)
+//Reads product info from the card DOM, validates input, and pushes/updates item in the cart
     const productForms = document.querySelectorAll('.product-form');
 
     productForms.forEach(form => {
@@ -137,12 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-    /* =========================================================
-     *  SECTION 4 — CART PAGE: Dynamic Table Rendering (page3)
-     *  Reads cart from localStorage and builds a live HTML table
-     *  with +/− quantity controls and a Remove button per row
-     * ========================================================= */
+//SECTION 4 — CART PAGE: Dynamic Table Rendering (page3)
+//Reads cart from localStorage and builds a live HTML table with +/− quantity controls and a Remove button per row
     const cartWrapper = document.getElementById('cart-wrapper');
     const emptyCartMsg = document.getElementById('empty-cart-msg');
     const cartContent = document.getElementById('cart-content');
@@ -159,10 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return cart.reduce((total, item) => total + (item.price * item.qty), 0);
     };
 
-    /**
-     * Renders the cart table onto the page.
-     * Shows an empty state message if the cart has no items.
-     */
+//Renders the cart table onto the page.
+//Shows an empty state message if the cart has no items.
     const renderCartTable = () => {
         // Guard: only run on the cart page
         if (!cartWrapper) return;
@@ -285,12 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render of cart table when page loads
     renderCartTable();
 
-
-    /* =========================================================
-     *  SECTION 5 — CHECKOUT PAGE: Order Summary & Submission (page5)
-     *  Displays a cart summary and processes the checkout form.
-     *  On submit, opens a new confirmation tab with order details.
-     * ========================================================= */
+//SECTION 5 — CHECKOUT PAGE: Order Summary & Submission (page5)
+//Displays a cart summary and processes the checkout form.
+//On submit, opens a new confirmation tab with order details.
     const checkoutFormSection = document.getElementById('checkout-form-section');
     const checkoutEmptyMsg = document.getElementById('checkout-empty');
     const checkoutSummary = document.getElementById('checkout-summary');
@@ -400,24 +375,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-    /* =========================================================
-     *  SECTION 6 — PROFILE PAGE: Registration Form (page4)
-     *  Extracts all form inputs (text, radio, checkbox, select)
-     *  and displays them in a summary table on a new tab
-     * ========================================================= */
+//SECTION 6 — PROFILE PAGE: Registration Form (page4)
+//Extracts all form inputs (text, radio, checkbox, select) and displays them in a summary table on a new tab
     const profileForm = document.getElementById('registrationForm');
 
     if (profileForm) {
         profileForm.addEventListener('submit', (e) => {
             e.preventDefault(); // Prevent default form submission/reload
 
-            /* --- Extract Radio Button Value --- */
-            // querySelector returns null if nothing is checked, so we use optional chaining
+            //Extract Radio Button Value
+            //querySelector returns null if nothing is checked, so we use optional chaining
             const selectedRadio = document.querySelector('input[name="shopCategory"]:checked');
             const shoppingPreference = selectedRadio ? selectedRadio.value : 'None selected';
 
-            /* --- Extract Checkbox Values --- */
+            //Extract Checkbox Values
             const checkedNewsBoxes = document.querySelectorAll('input[name="newsletter"]:checked');
             let newsletterPreferences = '';
 
@@ -434,8 +405,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 newsletterPreferences = 'Opted out';
             }
 
-            /* --- Collect All Form Fields into a Structured Array --- */
-            // Each entry is a [label, value] pair used to build the table
+            //Collect All Form Fields into a Structured Array
+            //Each entry is a [label, value] pair used to build the table
             const profileData = [
                 ['Full Name',           document.getElementById('fullName').value],
                 ['Email Address',       document.getElementById('userEmail').value],
@@ -448,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ['Bio / Notes',         document.getElementById('userBio').value || 'N/A']
             ];
 
-            /* --- Build Table Rows Using a Loop --- */
+            //Build Table Rows Using a Loop
             let tableRows = '';
             profileData.forEach(([label, value]) => {
                 tableRows += `
@@ -459,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             });
 
-            /* --- Open New Tab and Write Profile Summary Page --- */
+            //Open New Tab and Write Profile Summary Page
             const profileTab = window.open('', '_blank');
 
             // Set up the <head> of the new page
