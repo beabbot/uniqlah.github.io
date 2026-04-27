@@ -758,6 +758,8 @@ legend {
 .form-group input[type="checkbox"],
 .form-group input[type="radio"] {
     width: auto;
+    appearance: auto;
+    -webkit-appearance: auto;
 }
 
 .form-group input:focus,
