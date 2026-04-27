@@ -1,149 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> UNIQLAH </title>
-	<link rel="stylesheet" href="./css/styles.css">
-	<link rel="icon" type="image/png" href="./assets/uniqlah_icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIQLAH</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/png" href="./assets/uniqlah_icon.png">
 </head>
 
 <body>
-<header>
-	<nav class="navbar container flex-between">
-		<div class="logo">
-			<a href="index.html"><strong>UNIQLAH</strong></a>
-		</div>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="page2.html">Shop</a></li>
-			<li><a href="page3.html">Cart</a></li>
-			<li><a href="page4.html">Profile</a></li>
-			<li><a href="page5.html">Checkout</a></li> </ul>
-		</ul>
-	</nav>
-</header>
+    <header>
+        <nav class="navbar container flex-between">
+            <div class="logo">
+                <a href="index.html"><strong>UNIQLAH</strong></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Shop</a></li>
+                <li><a href="page3.html">Cart</a></li>
+                <li><a href="page4.html">Profile</a></li>
+                <li><a href="page5.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main class="container py-20">
-	<h1 class="section-title">Checkout</h1>
-	<p class="text-muted">Review your order and fill in your delivery details.</p>
+    <main class="container py-20">
+        <h1 class="section-title">Checkout</h1>
+        <p class="text-muted">Review your order and fill in your delivery details.</p>
 
-	<!-- Order Summary -->
-	<section class="checkout-form-section" id="checkout-summary-section">
-		<h2 class="section-title-sm">Order Summary</h2>
+        <section class="checkout-form-section" id="checkout-summary-section">
+            <h2 class="section-title-sm">Order Summary</h2>
 
-		<div id="checkout-empty" class="hidden-section">
-			<p class="text-muted">Your cart is empty.</p>
-			<br>
-			<a href="page2.html" class="btn">Browse Products</a>
-		</div>
+            <div id="checkout-empty" class="hidden-section">
+                <p class="text-muted">Your cart is empty.</p>
+                <br>
+                <a href="page2.html" class="btn">Browse Products</a>
+            </div>
 
-		<div id="checkout-summary">
-			<div id="checkout-items-container"></div>
-			<div class="checkout-total-row">
-				<p class="text-muted">Total</p>
-				<h2 class="section-title" id="checkout-total">RM 0.00</h2>
-			</div>
-		</div>
-	</section>
+            <div id="checkout-summary">
+                <div id="checkout-items-container"></div>
+                <div class="checkout-total-row">
+                    <p class="text-muted">Total</p>
+                    <h2 class="section-title" id="checkout-total">RM 0.00</h2>
+                </div>
+            </div>
+        </section>
 
-	<!-- Delivery Details Form -->
-	<section class="checkout-form-section animate-up" id="checkout-form-section">
-		<form id="checkoutForm" class="form-container">
-			<fieldset>
-				<legend>Delivery Details</legend>
+        <section class="checkout-form-section animate-up" id="checkout-form-section">
+            <form id="checkoutForm" class="form-container">
+                <fieldset>
+                    <legend>Delivery Details</legend>
 
-				<div class="form-group">
-					<label for="fullName">Full Name:</label>
-					<input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-				</div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
 
-				<div class="form-group">
-					<label for="userEmail">Email Address:</label>
-					<input type="email" id="userEmail" name="userEmail" placeholder="example@email.com" required>
-				</div>
+                    <div class="form-group">
+                        <label for="userEmail">Email Address:</label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="example@email.com" required>
+                    </div>
 
-				<div class="form-group">
-					<label for="userContact">Phone Number:</label>
-					<input type="tel" id="userContact" name="userContact" placeholder="010-000 0000" required>
-				</div>
+                    <div class="form-group">
+                        <label for="userContact">Phone Number:</label>
+                        <input type="tel" id="userContact" name="userContact" placeholder="010-000 0000" required>
+                    </div>
 
-				<div class="form-group">
-					<label for="userAddress">Delivery Address:</label>
-					<input type="text" id="userAddress" name="userAddress" placeholder="No. 1, Jalan Example, 50000 Kuala Lumpur" required>
-				</div>
+                    <div class="form-group">
+                        <label for="userAddress">Delivery Address:</label>
+                        <input type="text" id="userAddress" name="userAddress" placeholder="No. 1, Jalan Example, 50000 Kuala Lumpur" required>
+                    </div>
 
-				<div class="form-group">
-					<label for="deliveryNotes">Delivery Notes (optional):</label>
-					<br>
-					<textarea id="deliveryNotes" name="deliveryNotes" rows="3" cols="50" placeholder="E.g. Leave at door, call upon arrival..."></textarea>
-				</div>
-			</fieldset>
+                    <div class="form-group">
+                        <label for="deliveryNotes">Delivery Notes (optional):</label>
+                        <br>
+                        <textarea id="deliveryNotes" name="deliveryNotes" rows="3" cols="50" placeholder="E.g. Leave at door, call upon arrival..."></textarea>
+                    </div>
+                </fieldset>
 
-			<fieldset class="fieldset-mt">
-				<legend>Payment Method</legend>
+                <fieldset class="fieldset-mt">
+                    <legend>Payment Method</legend>
 
-				<div class="form-group">
-					<label for="paymentMethod">Select Payment:</label>
-					<select id="paymentMethod" name="paymentMethod" required>
-						<option value="">-- Choose --</option>
-						<option value="online-banking">Online Banking (FPX)</option>
-						<option value="card">Credit / Debit Card</option>
-						<option value="ewallet">E-Wallet (Touch 'n Go / GrabPay)</option>
-						<option value="cod">Cash on Delivery</option>
-					</select>
-				</div>
-			</fieldset>
+                    <div class="form-group">
+                        <label for="paymentMethod">Select Payment:</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">-- Choose --</option>
+                            <option value="online-banking">Online Banking (FPX)</option>
+                            <option value="card">Credit / Debit Card</option>
+                            <option value="ewallet">E-Wallet (Touch 'n Go / GrabPay)</option>
+                            <option value="cod">Cash on Delivery</option>
+                        </select>
+                    </div>
+                </fieldset>
 
-			<div class="form-actions">
-				<a href="page3.html" class="btn btn-outline">← Back to Cart</a>
-				<button type="submit" class="btn">Place Order</button>
-			</div>
-		</form>
-	</section>
+                <div class="form-actions">
+                    <a href="page3.html" class="btn btn-outline">← Back to Cart</a>
+                    <button type="submit" class="btn">Place Order</button>
+                </div>
+            </form>
+        </section>
 
-	<!-- Order Confirmation (hidden by default) -->
-	<div id="order-confirmation" class="hidden-section text-center py-20">
-		<h2 class="section-title">Order Placed! 🎉</h2>
-		<p class="text-muted">Thank you for shopping with Uniqlah. We'll contact you shortly with your delivery details.</p>
-		<br>
-		<a href="index.html" class="btn">Back to Home</a>
-	</div>
-</main>
+        <div id="order-confirmation" class="hidden-section text-center py-20">
+            <h2 class="section-title">Order Placed! 🎉</h2>
+            <p class="text-muted">Thank you for shopping with Uniqlah. We'll contact you shortly with your delivery details.</p>
+            <br>
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </main>
 
-<footer class="footer">
-	<div class="container footer-grid">
-		<section>
-			<h2>UNIQLAH</h2>
-			<p>Unique + Stylish. Affordable fashion for young adults who dare to express themselves.</p>
-		</section>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <section>
+                <h2>UNIQLAH</h2>
+                <p>Unique + Stylish. Affordable fashion for young adults who dare to express themselves.</p>
+            </section>
 
-		<nav>
-			<h2>QUICK LINKS</h2>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="page2.html">Shop</a></li>
-				<li><a href="page3.html">Cart</a></li>
-				<li><a href="page4.html">Profile</a></li>
-				<li><a href="page5.html">Checkout</a></li> </ul>
-			</ul>
-		</nav>
+            <nav>
+                <h2>QUICK LINKS</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">Shop</a></li>
+                    <li><a href="page3.html">Cart</a></li>
+                    <li><a href="page4.html">Profile</a></li>
+                    <li><a href="page5.html">Checkout</a></li>
+                </ul>
+            </nav>
 
-		<section>
-			<h2>CONTACT</h2>
-			<a href="mailto:hello@uniqlah.com">hello@uniqlah.com</a>
-			<p>+60 12-345 6789</p>
-			<p>Kuala Lumpur, Malaysia</p>
-		</section>
-	</div>
+            <section>
+                <h2>CONTACT</h2>
+                <a href="mailto:hello@uniqlah.com">hello@uniqlah.com</a>
+                <p>+60 12-345 6789</p>
+                <p>Kuala Lumpur, Malaysia</p>
+            </section>
+        </div>
 
-	<div class="container text-center">
-		<hr>
-		<p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
-		<p>&copy; 2026 Uniqlah Fashion</p>
-	</div>
-</footer>
+        <div class="container text-center">
+            <hr>
+            <p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
+            <p>&copy; 2026 Uniqlah Fashion</p>
+        </div>
+    </footer>
 
-<script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

@@ -1,159 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> UNIQLAH </title>
-	<link rel="stylesheet" href="./css/styles.css">
-	<link rel="icon" type="image/png" href="./assets/uniqlah_icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIQLAH</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/png" href="./assets/uniqlah_icon.png">
 </head>
 
 <body>
-<header>
-	<nav class="navbar container flex-between">
-		<div class="logo">
-			<a href="index.html"><strong>UNIQLAH</strong></a>
-		</div>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="page2.html">Shop</a></li>
-			<li><a href="page3.html">Cart</a></li>
-			<li><a href="page4.html">Profile</a></li>
-			<li><a href="page5.html">Checkout</a></li> </ul>
-		</ul>
-	</nav>
-</header>
+    <header>
+        <nav class="navbar container flex-between">
+            <div class="logo">
+                <a href="index.html"><strong>UNIQLAH</strong></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Shop</a></li>
+                <li><a href="page3.html">Cart</a></li>
+                <li><a href="page4.html">Profile</a></li>
+                <li><a href="page5.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main class="container py-20">
-	<h1 class="section-title">User Profile</h1>
-	<p class="text-muted">Manage your account details and delivery preferences.</p>
+    <main class="container py-20">
+        <h1 class="section-title">User Profile</h1>
+        <p class="text-muted">Manage your account details and delivery preferences.</p>
 
-	<section class="checkout-form-section animate-up" id="profile-form-section">
-		<form id="registrationForm" class="form-container">
-			<fieldset>
-				<legend>Account Registration & Info</legend>
+        <section class="checkout-form-section animate-up" id="profile-form-section">
+            <form id="registrationForm" class="form-container">
+                <fieldset>
+                    <legend>Account Registration & Info</legend>
 
-				<!-- Text input -->
-				<div class="form-group">
-					<label for="fullName">Full Name:</label>
-					<input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
-				</div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+                    </div>
 
-				<!-- Email input -->
-				<div class="form-group">
-					<label for="userEmail">Email Address:</label>
-					<input type="email" id="userEmail" name="userEmail" placeholder="example@email.com" required>
-				</div>
+                    <div class="form-group">
+                        <label for="userEmail">Email Address:</label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="example@email.com" required>
+                    </div>
 
-				<!-- Tel input -->
-				<div class="form-group">
-					<label for="userContact">Phone Number:</label>
-					<input type="tel" id="userContact" name="userContact" placeholder="010-000 0000" required>
-				</div>
+                    <div class="form-group">
+                        <label for="userContact">Phone Number:</label>
+                        <input type="tel" id="userContact" name="userContact" placeholder="010-000 0000" required>
+                    </div>
 
-				<!-- Text input -->
-				<div class="form-group">
-					<label for="userAddress">Address:</label>
-					<input type="text" id="userAddress" name="userAddress" placeholder="No. 1, Jalan Example, 50000 Kuala Lumpur" required>
-				</div>
+                    <div class="form-group">
+                        <label for="userAddress">Address:</label>
+                        <input type="text" id="userAddress" name="userAddress" placeholder="No. 1, Jalan Example, 50000 Kuala Lumpur" required>
+                    </div>
 
-				<!-- Numeric input -->
-				<div class="form-group">
-					<label for="userAge">Age:</label>
-					<input type="number" id="userAge" name="userAge" placeholder="e.g. 21" min="13" max="99" required>
-				</div>
+                    <div class="form-group">
+                        <label for="userAge">Age:</label>
+                        <input type="number" id="userAge" name="userAge" placeholder="e.g. 21" min="13" max="99" required>
+                    </div>
 
-				<!-- Select dropdown -->
-				<div class="form-group">
-					<label for="userGender">Gender:</label>
-					<select id="userGender" name="userGender" required>
-						<option value="">-- Select --</option>
-						<option value="male">Male</option>
-						<option value="female">Female</option>
-						<option value="other">Prefer not to say</option>
-					</select>
-				</div>
+                    <div class="form-group">
+                        <label for="userGender">Gender:</label>
+                        <select id="userGender" name="userGender" required>
+                            <option value="">-- Select --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Prefer not to say</option>
+                        </select>
+                    </div>
 
-				<!-- Radio group -->
-				<div class="form-group">
-					<label>Preferred Shopping Category:</label>
-					<div class="radio-group">
-						<label><input type="radio" name="shopCategory" value="men" required> Men</label>
-						<label><input type="radio" name="shopCategory" value="women"> Women</label>
-						<label><input type="radio" name="shopCategory" value="accessories"> Accessories</label>
-					</div>
-				</div>
+                    <div class="form-group">
+                        <label>Preferred Shopping Category:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="shopCategory" value="men" required> Men</label>
+                            <label><input type="radio" name="shopCategory" value="women"> Women</label>
+                            <label><input type="radio" name="shopCategory" value="accessories"> Accessories</label>
+                        </div>
+                    </div>
 
-				<!-- Checkbox group -->
-				<div class="form-group">
-					<label>Newsletter Preferences:</label>
-					<div class="checkbox-group">
-						<label><input type="checkbox" name="newsletter" value="new-arrivals"> New Arrivals</label>
-						<label><input type="checkbox" name="newsletter" value="promotions"> Promotions & Sales</label>
-						<label><input type="checkbox" name="newsletter" value="style-tips"> Style Tips</label>
-					</div>
-				</div>
+                    <div class="form-group">
+                        <label>Newsletter Preferences:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="newsletter" value="new-arrivals"> New Arrivals</label>
+                            <label><input type="checkbox" name="newsletter" value="promotions"> Promotions & Sales</label>
+                            <label><input type="checkbox" name="newsletter" value="style-tips"> Style Tips</label>
+                        </div>
+                    </div>
 
-				<!-- Textarea -->
-				<div class="form-group">
-					<label for="userBio">Delivery Notes / Bio:</label>
-					<br>
-					<textarea id="userBio" name="userBio" rows="4" cols="50" placeholder="Tell us more about your style or delivery preferences..."></textarea>
-				</div>
-			</fieldset>
+                    <div class="form-group">
+                        <label for="userBio">Delivery Notes / Bio:</label>
+                        <br>
+                        <textarea id="userBio" name="userBio" rows="4" cols="50" placeholder="Tell us more about your style or delivery preferences..."></textarea>
+                    </div>
+                </fieldset>
 
-			<div class="form-actions">
-				<a href="index.html" class="btn btn-outline">← Back to Home</a>
-				<div class="form-actions-right">
-					<button type="reset" class="btn btn-reset">Reset</button>
-					<button type="submit" class="btn">Save Changes</button>
-				</div>
-			</div>
-		</form>
-	</section>
+                <div class="form-actions">
+                    <a href="index.html" class="btn btn-outline">← Back to Home</a>
+                    <div class="form-actions-right">
+                        <button type="reset" class="btn btn-reset">Reset</button>
+                        <button type="submit" class="btn">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </section>
 
-	<!-- Confirmation shown after submit (hidden by default) -->
-	<div id="profile-confirmation" class="hidden-section">
-		<h2 class="section-title">Profile Saved! ✓</h2>
-		<p class="text-muted">Your details have been updated successfully.</p>
-		<br>
-		<a href="index.html" class="btn">Back to Home</a>
-	</div>
-</main>
+        <div id="profile-confirmation" class="hidden-section">
+            <h2 class="section-title">Profile Saved! ✓</h2>
+            <p class="text-muted">Your details have been updated successfully.</p>
+            <br>
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </main>
 
-<footer class="footer">
-	<div class="container footer-grid">
-		<section>
-			<h2>UNIQLAH</h2>
-			<p>Unique + Stylish. Affordable fashion for students and young adults who dare to express themselves.</p>
-		</section>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <section>
+                <h2>UNIQLAH</h2>
+                <p>Unique + Stylish. Affordable fashion for students and young adults who dare to express themselves.</p>
+            </section>
 
-		<nav>
-			<h2>QUICK LINKS</h2>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="page2.html">Shop</a></li>
-				<li><a href="page3.html">Cart</a></li>
-				<li><a href="page4.html">Profile</a></li>
-				<li><a href="page5.html">Checkout</a></li> </ul>
-			</ul>
-		</nav>
+            <nav>
+                <h2>QUICK LINKS</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">Shop</a></li>
+                    <li><a href="page3.html">Cart</a></li>
+                    <li><a href="page4.html">Profile</a></li>
+                    <li><a href="page5.html">Checkout</a></li>
+                </ul>
+            </nav>
 
-		<section>
-			<h2>CONTACT</h2>
-			<a href="mailto:hello@uniqlah.com">hello@uniqlah.com</a>
-			<p>+60 12-345 6789</p>
-			<p>Kuala Lumpur, Malaysia</p>
-		</section>
-	</div>
+            <section>
+                <h2>CONTACT</h2>
+                <a href="mailto:hello@uniqlah.com">hello@uniqlah.com</a>
+                <p>+60 12-345 6789</p>
+                <p>Kuala Lumpur, Malaysia</p>
+            </section>
+        </div>
 
-	<div class="container text-center">
-		<hr>
-		<p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
-		<p>&copy; 2026 Uniqlah Fashion</p>
-	</div>
-</footer>
+        <div class="container text-center">
+            <hr>
+            <p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
+            <p>&copy; 2026 Uniqlah Fashion</p>
+        </div>
+    </footer>
 
-<script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

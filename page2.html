@@ -1,238 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> UNIQLAH </title>
-	<link rel="stylesheet" href="./css/styles.css">
-	<link rel="icon" type="image/png" href="./assets/uniqlah_icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIQLAH</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/png" href="./assets/uniqlah_icon.png">
 </head>
 
 <body>
-<header>
-	<nav class="navbar container flex-between">
-		<div class="logo">
-			<a href="index.html"><strong>UNIQLAH</strong></a>
-		</div>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="page2.html">Shop</a></li>
-			<li><a href="page3.html">Cart</a></li>
-			<li><a href="page4.html">Profile</a></li>
-			<li><a href="page5.html">Checkout</a></li> </ul>
-		</ul>
-		
-	</nav>
-</header>
+    <header>
+        <nav class="navbar container flex-between">
+            <div class="logo">
+                <a href="index.html"><strong>UNIQLAH</strong></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Shop</a></li>
+                <li><a href="page3.html">Cart</a></li>
+                <li><a href="page4.html">Profile</a></li>
+                <li><a href="page5.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main class="container py-20">
-	<h1 class="section-title">Shop</h1>
-	<p class="text-muted">Browse our curated collection of trendy, affordable clothing.</p>
-	
-	<nav class="category-filters mb-8">
-		<button class="filter-btn active" data-filter="all">ALL</button>
-		<button class="filter-btn" data-filter="men">MEN</button>
-		<button class="filter-btn" data-filter="women">WOMEN</button>
-		<button class="filter-btn" data-filter="accessories">ACCESSORIES</button>
-    </nav>
-		
-		<section class="product-grid">
-				<div class="product-card" data-category="men">
-					<div class="product-image-wrapper">
-						<img src="./assets/product-shirt.png" alt="Classic White Tee">
-					</div>
-					<div class="product-info">
-						<h3>MEN</h3>
-						<h3>Classic White Tee</h3>
-						<p>RM 29.90</p>
-						
-						<form class="product-form">
-							<div class="selection-row">
-								<select name="size" class="size-select" required>
-									<option value="">Size</option>
-									<option value="S">S</option>
-									<option value="M">M</option>
-									<option value="L">L</option>
-								</select>
-								
-								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
-							</div>
-							
-							<button type="submit" class="btn btn-add">Add to Cart</button>
-						</form>
-					</div>
-				</div>
-				
-				<div class="product-card" data-category="women">
-					<div class="product-image-wrapper">
-						<img src="./assets/product-hoodie.png" alt="Hoodie">
-					</div>
-					<div class="product-info">
-						<h3>WOMEN</h3>
-						<h3>Sage Oversized Hoodie</h3>
-						<p>RM 59.90</p>
-						
-						<form class="product-form">
-							<div class="selection-row">
-								<select name="size" class="size-select" required>
-									<option value="">Size</option>
-									<option value="S">S</option>
-									<option value="M">M</option>
-									<option value="L">L</option>
-								</select>
-								
-								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
-							</div>
-							
-							<button type="submit" class="btn btn-add">Add to Cart</button>
-						</form>
-					</div>
-				</div>
-				
-				<div class="product-card" data-category="women">
-					<div class="product-image-wrapper">
-						<img src="./assets/product-dress.png" alt="Dress">
-					</div>
-					<div class="product-info">
-						<h3>WOMEN</h3>
-						<h3>Linen Midi Dress</h3>
-						<p>RM 79.90</p>
-						
-						<form class="product-form">
-							<div class="selection-row">
-								<select name="size" class="size-select" required>
-									<option value="">Size</option>
-									<option value="S">S</option>
-									<option value="M">M</option>
-									<option value="L">L</option>
-								</select>
-								
-								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
-							</div>
-							
-							<button type="submit" class="btn btn-add">Add to Cart</button>
-						</form>
-					</div>
-				</div>
-				
-				<div class="product-card" data-category="men">
-					<div class="product-image-wrapper">
-						<img src="./assets/product-jacket.png" alt="Jacket">
-					</div>
-					<div class="product-info">
-						<h3>MEN</h3>
-						<h3>Classic Denim Jacket</h3>
-						<p>RM 89.90</p>
-						
-						<form class="product-form">
-							<div class="selection-row">
-								<select name="size" class="size-select" required>
-									<option value="">Size</option>
-									<option value="S">S</option>
-									<option value="M">M</option>
-									<option value="L">L</option>
-								</select>
-								
-								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
-							</div>
-							
-							<button type="submit" class="btn btn-add">Add to Cart</button>
-						</form>
-					</div>
-				</div>
-				
-				<div class="product-card" data-category="accessories">
-					<div class="product-image-wrapper">
-						<img src="./assets/product-bag.png" alt="Bag">
-					</div>
-					<div class="product-info">
-						<h3>ACCESSORIES</h3>
-						<h3>Canvas Tote Bag</h3>
-						<p>RM 34.90</p>
-						
-						<form class="product-form">
-							<div class="selection-row">
-    							<input type="hidden" name="size" value="One Size">
-    							<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
-							</div>
-							
-							<button type="submit" class="btn btn-add">Add to Cart</button>
-						</form>
-					</div>
-				</div>
-				
-				<div class="product-card" data-category="accessories">
-					<div class="product-image-wrapper">
-						<img src="./assets/product-sneakers.png" alt="Sneakers">
-					</div>
-					<div class="product-info">
-						<h3>ACCESSORIES</h3>
-						<h3>Classic White Sneakers</h3>
-						<p>RM 89.90</p>
-						
-						<form class="product-form">
-							<div class="selection-row">
-								<select name="size" class="size-select" required>
-    								<option value="">EU Size</option>
-    								<option value="EU 35">EU 35</option>
-    								<option value="EU 36">EU 36</option>
-    								<option value="EU 37">EU 37</option>
-									<option value="EU 38">EU 38</option>
-									<option value="EU 39">EU 39</option>
-									<option value="EU 40">EU 40</option>
-									<option value="EU 41">EU 41</option>
-									<option value="EU 42">EU 42</option>
-									<option value="EU 43">EU 43</option>
-									<option value="EU 44">EU 44</option>
-								</select>
-								
-								<input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
-							</div>
-							
-							<button type="submit" class="btn btn-add">Add to Cart</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
+    <main class="container py-20">
+        <h1 class="section-title">Shop</h1>
+        <p class="text-muted">Browse our curated collection of trendy, affordable clothing.</p>
+        
+        <nav class="category-filters mb-8">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="men">MEN</button>
+            <button class="filter-btn" data-filter="women">WOMEN</button>
+            <button class="filter-btn" data-filter="accessories">ACCESSORIES</button>
+        </nav>
+            
+        <section class="product-grid">
+            <div class="product-card" data-category="men">
+                <div class="product-image-wrapper">
+                    <img src="./assets/product-shirt.png" alt="Classic White Tee">
+                </div>
+                <div class="product-info">
+                    <h3>MEN</h3>
+                    <h3>Classic White Tee</h3>
+                    <p>RM 29.90</p>
+                    
+                    <form class="product-form">
+                        <div class="selection-row">
+                            <select name="size" class="size-select" required>
+                                <option value="">Size</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                            <input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+                        </div>
+                        <button type="submit" class="btn btn-add">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="women">
+                <div class="product-image-wrapper">
+                    <img src="./assets/product-hoodie.png" alt="Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>WOMEN</h3>
+                    <h3>Sage Oversized Hoodie</h3>
+                    <p>RM 59.90</p>
+                    
+                    <form class="product-form">
+                        <div class="selection-row">
+                            <select name="size" class="size-select" required>
+                                <option value="">Size</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                            <input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+                        </div>
+                        <button type="submit" class="btn btn-add">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="women">
+                <div class="product-image-wrapper">
+                    <img src="./assets/product-dress.png" alt="Dress">
+                </div>
+                <div class="product-info">
+                    <h3>WOMEN</h3>
+                    <h3>Linen Midi Dress</h3>
+                    <p>RM 79.90</p>
+                    
+                    <form class="product-form">
+                        <div class="selection-row">
+                            <select name="size" class="size-select" required>
+                                <option value="">Size</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                            <input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+                        </div>
+                        <button type="submit" class="btn btn-add">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="men">
+                <div class="product-image-wrapper">
+                    <img src="./assets/product-jacket.png" alt="Jacket">
+                </div>
+                <div class="product-info">
+                    <h3>MEN</h3>
+                    <h3>Classic Denim Jacket</h3>
+                    <p>RM 89.90</p>
+                    
+                    <form class="product-form">
+                        <div class="selection-row">
+                            <select name="size" class="size-select" required>
+                                <option value="">Size</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                            <input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+                        </div>
+                        <button type="submit" class="btn btn-add">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="accessories">
+                <div class="product-image-wrapper">
+                    <img src="./assets/product-bag.png" alt="Bag">
+                </div>
+                <div class="product-info">
+                    <h3>ACCESSORIES</h3>
+                    <h3>Canvas Tote Bag</h3>
+                    <p>RM 34.90</p>
+                    
+                    <form class="product-form">
+                        <div class="selection-row">
+                            <input type="hidden" name="size" value="One Size">
+                            <input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+                        </div>
+                        <button type="submit" class="btn btn-add">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="accessories">
+                <div class="product-image-wrapper">
+                    <img src="./assets/product-sneakers.png" alt="Sneakers">
+                </div>
+                <div class="product-info">
+                    <h3>ACCESSORIES</h3>
+                    <h3>Classic White Sneakers</h3>
+                    <p>RM 89.90</p>
+                    
+                    <form class="product-form">
+                        <div class="selection-row">
+                            <select name="size" class="size-select" required>
+                                <option value="">EU Size</option>
+                                <option value="EU 35">EU 35</option>
+                                <option value="EU 36">EU 36</option>
+                                <option value="EU 37">EU 37</option>
+                                <option value="EU 38">EU 38</option>
+                                <option value="EU 39">EU 39</option>
+                                <option value="EU 40">EU 40</option>
+                                <option value="EU 41">EU 41</option>
+                                <option value="EU 42">EU 42</option>
+                                <option value="EU 43">EU 43</option>
+                                <option value="EU 44">EU 44</option>
+                            </select>
+                            <input type="number" name="quantity" class="qty-input" value="1" min="1" max="10">
+                        </div>
+                        <button type="submit" class="btn btn-add">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+        
+    <footer class="footer">
+        <div class="container footer-grid">
+            <section>
+                <h2>UNIQLAH</h2>
+                <p>Unique + Stylish. Affordable fashion for young adults who dare to express themselves.</p>
+            </section>
+            
+            <nav>
+                <h2>QUICK LINKS</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">Shop</a></li>
+                    <li><a href="page3.html">Cart</a></li>
+                    <li><a href="page4.html">Profile</a></li>
+                    <li><a href="page5.html">Checkout</a></li>
+                </ul>
+            </nav>
+            
+            <section>
+                <h2>CONTACT</h2>
+                <p>hello@uniqlah.com</p>
+                <p>+60 12-345 6789</p>
+                <p>Kuala Lumpur, Malaysia</p>
+            </section>
+        </div>
+        
+        <div class="container text-center">
+            <hr>
+            <p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
+            <p>&copy; 2026 Uniqlah Fashion</p>
+        </div>
+    </footer>
 
-		</main>
-		
-	<footer class="footer">
-		<div class="container footer-grid">
-			<section>
-				<h2>UNIQLAH</h2>
-				<p>Unique + Stylish. Affordable fashion for young adults who dare to express themselves.
-				</p>
-			</section>
-			
-			<nav>
-				<h2>QUICK LINKS</h2>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="page2.html">Shop</a></li>
-					<li><a href="page3.html">Cart</a></li>
-					<li><a href="page4.html">Profile</a></li>
-					<li><a href="page5.html">Checkout</a></li> </ul>
-				</ul>
-			</nav>
-			
-			<section>
-				<h2>CONTACT</h2>
-				<p>hello@uniqlah.com</p>
-				<p>+60 12-345 6789</p>
-				<p>Kuala Lumpur, Malaysia</p>
-			</section>
-		</div>
-		
-		<div class="container text-center">
-			<hr>
-			<p><a href="#top" class="back-to-top">Back to Top ↑</a></p>
-			<p>&copy; 2026 Uniqlah Fashion</p>
-		</div>
-	</footer>
-
-	<script src="./js/scripts.js"></script>
-
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
